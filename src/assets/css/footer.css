@@ -2,12 +2,12 @@
    Footer
 ========================= */
 footer {
-  height: 100px;
+  height: 60px;
   z-index: 50;
   width: 100%;
   background: var(--color-background-footer);
   border-top: 1px solid var(--color-border);
-  font-size: 0.875rem;
+  font-size: 0.775rem;
 }
 
 .site-footer-inner {
@@ -18,5 +18,4 @@ footer {
   width: 100%;
   padding: 16px;
   text-align: center;
-  font-family: "Bangers", monospace;
 }
