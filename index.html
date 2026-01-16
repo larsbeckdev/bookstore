@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BOOKSTORE</title>
+
+    <!-- styles -->
+    <link rel="stylesheet" href="./src/assets/css/styles.css" />
+    <link rel="stylesheet" href="./src/assets/css/typography.css" />
+  </head>
+
+  <body>
+    <!-- --------------- HEADER ------------------ -->
+    <!-- <header id="header"></header> -->
+    <header class="site-header">
+      <div class="layout site-header-inner">
+        <div class="site-header-inner-left">
+          <div class="logo-box">
+            <!-- svg class logo -->
+          </div>
+        </div>
+
+        <div class="site-header-inner-right">
+          <div class="dark-mode-toggle-box">
+            <button
+              onclick="toggleTheme()"
+              id="theme-toggle"
+              type="button"
+              aria-label="Theme umschalten">
+              Theme wechseln
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- --------------- MAIN ------------------ -->
+    <!-- <main id="main"></main> -->
+
+    <main>
+      <div class="main-inner">
+        <section class="section container book-archive-section">
+          <div class="section-inner">
+            <div class="book-archive-grid"></div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- --------------- FOOTER ------------------ -->
+    <!-- <footer id="footer"></footer> -->
+    <footer class="site-footer">
+      <div class="layout site-footer-inner">
+        <p>&copy; 2026 BOOKSTORE. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- ----------------------------------------------------------------
+    ------------------------------- SCRIPTS ----------------------------- 
+    --------------------------------------------------------------- -->
+    <!-- main -->
+    <script defer src="./src/assets/js/script.js"></script>
+    <script defer src="./src/assets/js/thememode.js"></script>
+    <!-- noteblock -->
+  </body>
+</html>
