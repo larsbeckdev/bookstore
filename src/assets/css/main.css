@@ -1,0 +1,13 @@
+/* =========================
+   Main
+========================= */
+main {
+  min-height: calc(100vh - 100px);
+  padding: 120px 0;
+}
+
+.main-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
