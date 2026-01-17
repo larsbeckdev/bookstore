@@ -42,6 +42,7 @@ function bookCard(book, index) {
           />
         </div>
 
+        <p>${book.price}</p>
          <p>Kommentare: ${book.publishedYear}</p>
         <p>Kommentare: ${book.comments.length}</p>
 
