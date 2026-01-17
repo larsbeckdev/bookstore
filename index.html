@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./src/assets/css/styles.css" />
     <link rel="stylesheet" href="./src/assets/css/typography.css" />
     <link rel="stylesheet" href="./src/assets/css/thememode.css" />
-    <link rel="stylesheet" href="./src/assets/css/book-archive.css" />
+    <link rel="stylesheet" href="./src/assets/css/book-list.css" />
 
     <link rel="stylesheet" href="./src/assets/css/layout.css" />
     <link rel="stylesheet" href="./src/assets/css/variables.css" />
@@ -64,9 +64,9 @@
 
     <main>
       <div class="main-inner">
-        <section class="section container book-archive-section">
+        <section class="section container book-list-section">
           <div class="section-inner">
-            <div class="book-archive-grid"></div>
+            <div id="book-card-list" class="book-card-list"></div>
           </div>
         </section>
       </div>
@@ -84,6 +84,8 @@
     ------------------------------- SCRIPTS ----------------------------- 
     --------------------------------------------------------------- -->
     <!-- main -->
+    <script defer src="/src/assets/data/books.js"></script>
+    <script defer src="./src/assets/js/book-list.js"></script>
     <script defer src="./src/assets/js/script.js"></script>
     <script defer src="./src/assets/js/thememode.js"></script>
     <!-- noteblock -->

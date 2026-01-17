@@ -18,10 +18,27 @@ header {
   gap: 1rem;
 }
 
+.site-header-inner-left,
+.site-header-inner-right {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.logo-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  padding: 0.25rem;
+}
+
 .logo {
   width: 100%;
   max-width: 150px;
-  height: auto;
+  height: 40px;
+  width: 40px;
 }
 
 .fotogram-full-svg-letter {
