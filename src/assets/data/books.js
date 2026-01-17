@@ -3,7 +3,7 @@ let books = [
   {
     name: "Die Geheimnisse des Ozeans",
     author: "Clara Meer",
-    cover: "./src/assets/images/die-geheimnisse-des-ozeans.png",
+    cover: "./src/assets/images/die-geheimnisse-des-ozeans.webp",
     likes: 1250,
     liked: true,
     price: 19.99,
@@ -42,7 +42,7 @@ let books = [
   {
     name: "Der vergessene Pfad",
     author: "Maximilian Schwarz",
-    cover: "./src/assets/images/der-vergessene-pfad.png",
+    cover: "./src/assets/images/der-vergessene-pfad.webp",
     likes: 980,
     liked: false,
     price: 14.5,
@@ -55,7 +55,7 @@ let books = [
   {
     name: "Die Farben des Himmels",
     author: "Laura Blau",
-    cover: "./src/assets/images/die-farben-des-himmels.png",
+    cover: "./src/assets/images/die-farben-des-himmels.webp",
     likes: 1520,
     liked: true,
     price: 22.95,
@@ -94,7 +94,7 @@ let books = [
   {
     name: "Das Rätsel der Zeit",
     author: "Alexander Weiss",
-    cover: "./src/assets/images/das-raetsel-der-zeit.png",
+    cover: "./src/assets/images/das-raetsel-der-zeit.webp",
     likes: 750,
     liked: false,
     price: 18.0,
@@ -118,7 +118,7 @@ let books = [
   {
     name: "Der letzte Wächter",
     author: "Sabine Grün",
-    cover: "./src/assets/images/der-letzte-waechter.png",
+    cover: "./src/assets/images/der-letzte-waechter.webp",
     likes: 1300,
     liked: true,
     price: 16.75,
@@ -131,7 +131,7 @@ let books = [
   {
     name: "Im Schatten des Mondes",
     author: "Philipp Silber",
-    cover: "./src/assets/images/im-schatten-des-mondes.png",
+    cover: "./src/assets/images/im-schatten-des-mondes.webp",
     likes: 890,
     liked: false,
     price: 12.3,
@@ -155,7 +155,7 @@ let books = [
   {
     name: "Jenseits der Sterne",
     author: "Oliver Schwarz",
-    cover: "./src/assets/images/jenseits-der-sterne.png",
+    cover: "./src/assets/images/jenseits-der-sterne.webp",
     likes: 1450,
     liked: true,
     price: 21.0,
@@ -174,7 +174,7 @@ let books = [
   {
     name: "Das verborgene Königreich",
     author: "Elena Gold",
-    cover: "./src/assets/images/das-verborgene-koenigreich.png",
+    cover: "./src/assets/images/das-verborgene-koenigreich.webp",
     likes: 920,
     liked: false,
     price: 17.5,
@@ -193,7 +193,7 @@ let books = [
   {
     name: "Liebe in Zeiten des Krieges",
     author: "Emilia Rot",
-    cover: "./src/assets/images/liebe-in-zeiten-des-krieges.png",
+    cover: "./src/assets/images/liebe-in-zeiten-des-krieges.webp",
     likes: 1800,
     liked: true,
     price: 19.99,
