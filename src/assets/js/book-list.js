@@ -42,12 +42,21 @@ function bookCard(book, index) {
           />
         </div>
 
-        <p>${book.price}</p>
-         <p>Kommentare: ${book.publishedYear}</p>
-        <p>Kommentare: ${book.comments.length}</p>
+        <div class="book-price-container"><p class="book-price"> ${new Intl.NumberFormat(
+          "de-DE",
+          {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2,
+          }
+        ).format(book.price)}</p> <span class="currency">${book.currency}</span>
+        </div>
 
-
-      </div>
+        <div class="book-details">
+          <p class="book-genre">Kategorie: ${book.genre}</p>
+          <p class="book-published-year">Veröffentlicht: ${
+            book.publishedYear
+          }</p>
+        </div>
 
       <div class="book-card-footer">
       <button class="add-to-cart-btn">In den Warenkorb</button>

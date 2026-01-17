@@ -7,6 +7,7 @@ let books = [
     likes: 1250,
     liked: true,
     price: 19.99,
+    currency: "€",
     publishedYear: 2018,
     genre: "Fantasy",
     comments: [
@@ -45,6 +46,7 @@ let books = [
     likes: 980,
     liked: false,
     price: 14.5,
+    currency: "€",
     publishedYear: 2021,
     genre: "Fantasy",
     comments: [],
@@ -57,6 +59,7 @@ let books = [
     likes: 1520,
     liked: true,
     price: 22.95,
+    currency: "€",
     publishedYear: 2019,
     genre: "Romantik",
     comments: [
@@ -95,6 +98,7 @@ let books = [
     likes: 750,
     liked: false,
     price: 18.0,
+    currency: "€",
     publishedYear: 2020,
     genre: "Science-Fiction",
     comments: [
@@ -118,6 +122,7 @@ let books = [
     likes: 1300,
     liked: true,
     price: 16.75,
+    currency: "€",
     publishedYear: 2017,
     genre: "Fantasy",
     comments: [],
@@ -130,6 +135,7 @@ let books = [
     likes: 890,
     liked: false,
     price: 12.3,
+    currency: "€",
     publishedYear: 2022,
     genre: "Science-Fiction",
     comments: [
@@ -153,6 +159,7 @@ let books = [
     likes: 1450,
     liked: true,
     price: 21.0,
+    currency: "€",
     publishedYear: 2015,
     genre: "Science-Fiction",
     comments: [
@@ -171,6 +178,7 @@ let books = [
     likes: 920,
     liked: false,
     price: 17.5,
+    currency: "€",
     publishedYear: 2020,
     genre: "Fantasy",
     comments: [
@@ -189,6 +197,7 @@ let books = [
     likes: 1800,
     liked: true,
     price: 19.99,
+    currency: "€",
     publishedYear: 2016,
     genre: "Romantik",
     comments: [
