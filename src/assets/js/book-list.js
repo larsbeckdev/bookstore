@@ -1,7 +1,7 @@
 const listEl = document.getElementById("book-card-list");
 
 // Bücher rendern
-function renderBooks() {
+function renderBooks () {
   listEl.innerHTML = "";
 
   for (let i = 0; i < books.length; i++) {
@@ -10,10 +10,10 @@ function renderBooks() {
 }
 
 // Kommentare rendern
-function renderComments(book, container) {
+function renderComments (book, container) {
   container.innerHTML = "";
 
-  book.comments.forEach((c) => {
+  book.comments.forEach(c => {
     const li = document.createElement("li");
     li.className = "book-comment";
 
@@ -30,7 +30,7 @@ function renderComments(book, container) {
 }
 
 // Kommentar absenden
-function setupCommentForm(book, cardEl) {
+function setupCommentForm (book, cardEl) {
   const nameInput = cardEl.querySelector(".book-comment-name-input");
   const textInput = cardEl.querySelector(".book-comment-text-input");
   const submitBtn = cardEl.querySelector(".book-comment-submit");
@@ -58,7 +58,7 @@ function setupCommentForm(book, cardEl) {
 }
 
 // Book Card Template
-function bookCard(book, index) {
+function bookCard (book, index) {
   return /* html */ `
     <div class="book-card">
 
@@ -84,17 +84,15 @@ function bookCard(book, index) {
         <div class="book-cover-main-container">
           <div class="book-cover-container">
           <img
-            src="${
-              book.cover ? book.cover : "./src/assets/images/placeholder.png"
-            }"
+            src="${book.cover ? book.cover : "./src/assets/images/placeholder.png"}"
             alt="Buchcover von ${book.name}"
             class="book-cover"
           />
         </div>
         <div class="book-copyright-container">
         <p class="book-copyright">Copyright © ${new Date().getFullYear()} ${
-          book.author
-        }</p>
+    book.author
+  }</p>
         </div>
 
         
@@ -107,15 +105,13 @@ function bookCard(book, index) {
           {
             minimumFractionDigits: 2,
             maximumFractionDigits: 2,
-          },
+          }
         ).format(book.price)}</p> <span class="currency">${book.currency}</span>
         </div>
 
         <div class="book-details">
           <p class="book-genre">Kategorie: ${book.genre}</p>
-          <p class="book-published-year">Veröffentlicht: ${
-            book.publishedYear
-          }</p>
+          <p class="book-published-year">Veröffentlicht: ${book.publishedYear}</p>
         </div>
 
       <div class="book-card-footer">
@@ -147,7 +143,7 @@ function bookCard(book, index) {
 }
 
 // Like Button Heart SVG
-function heartSvg() {
+function heartSvg () {
   return `
     <svg xmlns="http://www.w3.org/2000/svg" 
     width="24" 
@@ -165,7 +161,7 @@ function heartSvg() {
 }
 
 // Toogle Function for Like Button
-function toggleLike(index) {
+function toggleLike (index) {
   books[index].liked = !books[index].liked;
 
   if (books[index].liked) books[index].likes++;
@@ -175,7 +171,7 @@ function toggleLike(index) {
 }
 
 // Zeit formatieren
-function formatTime(dateString) {
+function formatTime (dateString) {
   const date = new Date(dateString);
   const diff = Math.floor((Date.now() - date.getTime()) / 1000);
 
