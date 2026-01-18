@@ -259,13 +259,21 @@
   padding: 0;
   max-width: max-content;
   max-height: max-content;
+  height: auto;
   color: red;
   background: transparent;
   border: none;
 }
 
-/* 
+.book-comment-delete svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  fill: none;
+}
+
+
 .book-comment-delete:hover, {
-  outline: none!important;
-  outline-offset: none!important;
-} */
+  outline: 0px solid transparent!important;
+  outline-offset: 0px!important;
+}
