@@ -97,6 +97,7 @@ function bookCard(book, index) {
   }</p>
         </div>
 
+        
 
         </div>
         
