@@ -31,6 +31,7 @@ export function renderComments(book, container) {
           type="button"
           class="book-comment-delete"
           data-comment-id="${escapeHtml(c.id)}"
+          data-comment-id="${escapeHtml(c.id)}"
           aria-label="Kommentar löschen"
           title="Löschen"
         >
@@ -45,11 +46,11 @@ export function renderComments(book, container) {
   });
 }
 
-/**
- * @param {object} book - das Buchobjekt (Referenz aus books[])
- * @param {HTMLElement} cardEl - Card DOM
- * @param {(updatedBooks?: any)=>void} persist - Callback zum Speichern in localStorage
- */
+
+//  @param {object} book - das Buchobjekt (Referenz aus books[])
+//  @param {HTMLElement} cardEl - Card DOM
+//  @param {(updatedBooks?: any)=>void} persist - Callback zum Speichern in localStorage
+
 export function setupCommentForm(book, cardEl, persist) {
   const nameInput = cardEl.querySelector(".book-comment-name-input");
   const textInput = cardEl.querySelector(".book-comment-text-input");
