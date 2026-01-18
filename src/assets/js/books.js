@@ -1,5 +1,4 @@
-let books = [
-  // Book 1
+export const books = [
   {
     name: "Die Geheimnisse des Ozeans",
     author: "Clara Meer",
@@ -15,30 +14,35 @@ let books = [
         name: "Leser123",
         comment:
           "Ein faszinierendes Abenteuerbuch, das mich von der ersten Seite an gefesselt hat.",
+        createdAt: "2024-11-12T14:32:00Z",
       },
       {
         name: "Bookworm84",
         comment:
           "Eine romantische Geschichte, die mein Herz berührt und mich zum Nachdenken gebracht hat.",
+        createdAt: "2024-11-13T09:15:00Z",
       },
       {
         name: "FantasyFanatic",
         comment:
           "Eine spannende Fantasiewelt, die ich nur schwer aus der Hand legen konnte.",
+        createdAt: "2024-11-14T18:47:00Z",
       },
       {
         name: "SciFiGuru",
         comment:
           "Ein cleverer Science-Fiction-Roman mit interessanten Zeitreise-Konzepten und Charakteren.",
+        createdAt: "2024-11-15T20:03:00Z",
       },
       {
         name: "NovelLover",
         comment:
           "Ein Buch, das voller magischer Überraschungen steckt und mich begeistert hat.",
+        createdAt: "2024-11-16T11:58:00Z",
       },
     ],
   },
-  // Book 2
+
   {
     name: "Der vergessene Pfad",
     author: "Maximilian Schwarz",
@@ -51,7 +55,7 @@ let books = [
     genre: "Fantasy",
     comments: [],
   },
-  // Book 3
+
   {
     name: "Die Farben des Himmels",
     author: "Laura Blau",
@@ -67,30 +71,35 @@ let books = [
         name: "LeserPeter",
         comment:
           "Die Handlung war fesselnd und die Charaktere unglaublich lebendig dargestellt.",
+        createdAt: "2024-10-05T16:21:00Z",
       },
       {
         name: "BookLover21",
         comment:
           "Ein romantisches Meisterwerk, das mich tief berührt und bewegt hat.",
+        createdAt: "2024-10-06T10:08:00Z",
       },
       {
         name: "FantasyNerd",
         comment:
           "Fantastische Welten und epische Abenteuer - genau mein Geschmack!",
+        createdAt: "2024-10-07T19:44:00Z",
       },
       {
         name: "SciFiEnthusiast",
         comment:
           "Die Zeitreise-Elemente waren genial und haben die Story spannend gemacht.",
+        createdAt: "2024-10-08T21:11:00Z",
       },
       {
         name: "ReadingAddict",
         comment:
           "Ein unvergessliches Buch, das mich auf eine magische Reise mitgenommen hat.",
+        createdAt: "2024-10-09T13:56:00Z",
       },
     ],
   },
-  // Book 4
+
   {
     name: "Das Rätsel der Zeit",
     author: "Alexander Weiss",
@@ -106,15 +115,17 @@ let books = [
         name: "BuchKenner",
         comment:
           "Ein spannendes Abenteuer, das mich von Anfang an mitgerissen hat.",
+        createdAt: "2024-09-14T17:02:00Z",
       },
       {
         name: "LeseWurm",
         comment:
           "Die Liebesgeschichte war herzergreifend und wunderschön geschrieben.",
+        createdAt: "2024-09-15T11:34:00Z",
       },
     ],
   },
-  // Book 5
+
   {
     name: "Der letzte Wächter",
     author: "Sabine Grün",
@@ -127,7 +138,7 @@ let books = [
     genre: "Fantasy",
     comments: [],
   },
-  // Book 6
+
   {
     name: "Im Schatten des Mondes",
     author: "Philipp Silber",
@@ -143,15 +154,17 @@ let books = [
         name: "BücherLiebhaber",
         comment:
           "Eine magische Reise durch eine faszinierende Fantasiewelt, absolut fesselnd.",
+        createdAt: "2024-12-01T20:45:00Z",
       },
       {
         name: "Leseratte",
         comment:
           "Ein packender Science-Fiction-Roman, der mich zum Nachdenken gebracht hat.",
+        createdAt: "2024-12-02T09:18:00Z",
       },
     ],
   },
-  // Book 7
+
   {
     name: "Jenseits der Sterne",
     author: "Oliver Schwarz",
@@ -167,10 +180,11 @@ let books = [
         name: "Leser123",
         comment:
           "Ein fesselndes Abenteuer, das mich von Anfang bis Ende mitgerissen hat.",
+        createdAt: "2024-08-22T18:09:00Z",
       },
     ],
   },
-  // Book 8
+
   {
     name: "Das verborgene Königreich",
     author: "Elena Gold",
@@ -186,10 +200,11 @@ let books = [
         name: "Bookworm92",
         comment:
           "Ein faszinierendes Buch, das mich von der ersten Seite an gefesselt hat.",
+        createdAt: "2024-07-11T14:55:00Z",
       },
     ],
   },
-  // Book 9
+
   {
     name: "Liebe in Zeiten des Krieges",
     author: "Emilia Rot",
@@ -205,16 +220,19 @@ let books = [
         name: "Bibliophile23",
         comment:
           "Die Fantasiewelt war so lebendig, ich konnte das Buch kaum aus der Hand legen.",
+        createdAt: "2024-06-03T16:42:00Z",
       },
       {
         name: "StorySeeker",
         comment:
           "Eine unglaublich berührende Liebesgeschichte, die mich tief bewegt hat.",
+        createdAt: "2024-06-04T10:27:00Z",
       },
       {
         name: "SciFiExplorer",
         comment:
           "Spannende Zukunftsvisionen und interessante Charaktere machten diesen Roman einzigartig.",
+        createdAt: "2024-06-05T21:13:00Z",
       },
     ],
   },

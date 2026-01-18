@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="./src/assets/css/footer.css" />
     <link rel="stylesheet" href="./src/assets/css/main.css" />
     <link rel="stylesheet" href="./src/assets/css/buttons.css" />
+    <link rel="stylesheet" href="./src/assets/css/inputs.css" />
   </head>
 
   <body>
@@ -38,11 +39,9 @@
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="lucide lucide-book-icon lucide-book"
-            >
+              class="lucide lucide-book-icon lucide-book">
               <path
-                d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"
-              />
+                d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20" />
             </svg>
           </div>
         </div>
@@ -53,8 +52,7 @@
               onclick="toggleTheme()"
               id="theme-toggle"
               type="button"
-              aria-label="Theme umschalten"
-            >
+              aria-label="Theme umschalten">
               Theme wechseln
             </button>
           </div>
@@ -87,9 +85,9 @@
     ------------------------------- SCRIPTS ----------------------------- 
     --------------------------------------------------------------- -->
     <!-- main -->
-    <script defer src="./src/assets/data/books.js"></script>
-    <script defer src="./src/assets/js/book-list.js"></script>
-    <script defer src="./src/assets/js/script.js"></script>
+    <!-- <script defer src="./src/assets/js/books.js"></script> -->
+    <!-- <script defer src="./src/assets/js/book-list.js"></script> -->
+    <script defer type="module" src="./src/assets/js/main.js"></script>
     <script defer src="./src/assets/js/thememode.js"></script>
     <!-- noteblock -->
   </body>

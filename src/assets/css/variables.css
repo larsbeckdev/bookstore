@@ -29,6 +29,9 @@
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
 
+  --color-button: var(--button);
+  --color-button-foreground: var(--button-foreground);
+
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
 
@@ -84,6 +87,9 @@
   --card: oklch(0.995 0.003 240);
   --card-foreground: oklch(0.17 0.02 255);
 
+  --button: rgba(255, 255, 255, 0.4);
+  --button-foreground: oklch(0.17 0.02 255);
+
   --popover: oklch(0.995 0.003 240);
   --popover-foreground: oklch(0.17 0.02 255);
 
@@ -116,6 +122,9 @@ html.dark {
 
   --card: oklch(0.21 0.02 260);
   --card-foreground: oklch(0.93 0.01 95);
+
+  --button: rgba(19, 25, 34, 0.4);
+  --button-foreground: oklch(0.93 0.01 95);
 
   --popover: oklch(0.21 0.02 260);
   --popover-foreground: oklch(0.93 0.01 95);
