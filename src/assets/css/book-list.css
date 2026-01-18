@@ -237,6 +237,7 @@
   gap: 0.5rem;
   align-items: center;
   font-size: 0.875rem;
+  justify-content: space-between;
 }
 
 .book-comment-name {
@@ -253,3 +254,18 @@
   font-size: 0.875rem;
   line-height: 1.4;
 }
+
+.book-comment-delete {
+  padding: 0;
+  max-width: max-content;
+  max-height: max-content;
+  color: red;
+  background: transparent;
+  border: none;
+}
+
+/* 
+.book-comment-delete:hover, {
+  outline: none!important;
+  outline-offset: none!important;
+} */

@@ -1,5 +1,24 @@
 import { escapeHtml, formatTime } from "./utils.js";
 
+export function closeSvg() {
+  return /* html */ `
+    <svg 
+      xmlns="http://www.w3.org/2000/svg" 
+      width="24" 
+      height="24" 
+      viewBox="0 0 24 24" 
+      fill="none" 
+      stroke="currentColor" 
+      stroke-width="2" 
+      stroke-linecap="round" 
+      stroke-linejoin="round" 
+      class="lucide lucide-x-icon lucide-x close-icon">
+      <path d="M18 6 6 18"/>
+      <path d="m6 6 12 12"/>
+    </svg>
+  `;
+}
+
 function ensureCommentIds(book) {
   if (!Array.isArray(book.comments)) book.comments = [];
   let changed = false;
@@ -7,7 +26,8 @@ function ensureCommentIds(book) {
   for (const c of book.comments) {
     if (!c.id) {
       c.id =
-        (crypto?.randomUUID?.() ?? `${Date.now()}-${Math.random().toString(16).slice(2)}`);
+        crypto?.randomUUID?.() ??
+        `${Date.now()}-${Math.random().toString(16).slice(2)}`;
       changed = true;
     }
   }
@@ -24,8 +44,10 @@ export function renderComments(book, container) {
 
     li.innerHTML = /* html */ `
       <div class="book-comment-header">
-        <strong class="book-comment-name">${escapeHtml(c.name)}</strong>
-        <span class="book-comment-time">${formatTime(c.createdAt)}</span>
+        <div class="book-comment-header-info">
+          <strong class="book-comment-name">${escapeHtml(c.name)}</strong>
+          <span class="book-comment-time">${formatTime(c.createdAt)}</span>
+        </div>
 
         <button
           type="button"
@@ -35,7 +57,7 @@ export function renderComments(book, container) {
           aria-label="Kommentar löschen"
           title="Löschen"
         >
-          ✕
+          ${closeSvg()}
         </button>
       </div>
 
@@ -45,7 +67,6 @@ export function renderComments(book, container) {
     container.appendChild(li);
   });
 }
-
 
 //  @param {object} book - das Buchobjekt (Referenz aus books[])
 //  @param {HTMLElement} cardEl - Card DOM
@@ -59,7 +80,7 @@ export function setupCommentForm(book, cardEl, persist) {
 
   if (!nameInput || !textInput || !submitBtn || !commentsListEl) return;
 
-  // IDs nachziehen 
+  // IDs nachziehen
   const idsChanged = ensureCommentIds(book);
   if (idsChanged) persist?.();
 
@@ -79,7 +100,9 @@ export function setupCommentForm(book, cardEl, persist) {
     if (!Array.isArray(book.comments)) book.comments = [];
 
     book.comments.push({
-      id: crypto?.randomUUID?.() ?? `${Date.now()}-${Math.random().toString(16).slice(2)}`,
+      id:
+        crypto?.randomUUID?.() ??
+        `${Date.now()}-${Math.random().toString(16).slice(2)}`,
       name,
       comment: text,
       createdAt: new Date().toISOString(),
