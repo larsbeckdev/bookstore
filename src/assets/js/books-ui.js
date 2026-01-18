@@ -1,7 +1,7 @@
 import { bookCard } from "./templates.js";
 import { setupCommentForm } from "./comments.js";
 
-export function renderBooks(books, listEl) {
+export function renderBooks(books, listEl, persist) {
   listEl.innerHTML = "";
 
   for (let i = 0; i < books.length; i++) {
