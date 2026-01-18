@@ -1,5 +1,6 @@
 const listEl = document.getElementById("book-card-list");
 
+// Bücher rendern
 function renderBooks() {
   listEl.innerHTML = "";
 
@@ -8,9 +9,57 @@ function renderBooks() {
   }
 }
 
+// Kommentare rendern
+function renderComments(book, container) {
+  container.innerHTML = "";
+
+  book.comments.forEach((c) => {
+    const li = document.createElement("li");
+    li.className = "book-comment";
+
+    li.innerHTML = `
+      <div class="book-comment-header">
+        <strong class="book-comment-name">${escapeHtml(c.name)}</strong>
+        <span class="book-comment-time">${formatTime(c.createdAt)}</span>
+      </div>
+      <p class="book-comment-text">${escapeHtml(c.comment)}</p>
+    `;
+
+    container.appendChild(li);
+  });
+}
+
+// Kommentar absenden
+function setupCommentForm(book, cardEl) {
+  const nameInput = cardEl.querySelector(".book-comment-name-input");
+  const textInput = cardEl.querySelector(".book-comment-text-input");
+  const submitBtn = cardEl.querySelector(".book-comment-submit");
+  const listEl = cardEl.querySelector(".book-comments-list");
+
+  submitBtn.addEventListener("click", () => {
+    const name = nameInput.value.trim();
+    const text = textInput.value.trim();
+
+    if (!name || !text) return;
+
+    book.comments.push({
+      name,
+      comment: text,
+      createdAt: new Date().toISOString(),
+    });
+
+    nameInput.value = "";
+    textInput.value = "";
+
+    renderComments(book, listEl);
+  });
+
+  renderComments(book, listEl);
+}
+
 // Book Card Template
 function bookCard(book, index) {
-  return `
+  return /* html */ `
     <div class="book-card">
 
       <div class="book-card-header">
@@ -69,7 +118,27 @@ function bookCard(book, index) {
         </div>
 
       <div class="book-card-footer">
+      
+
+      <div class="book-card-footer-inner">
       <button class="add-to-cart-btn">In den Warenkorb</button>
+
+      <div class="book-comments-section">
+        <h4>Kommentare:</h4>
+        <li class="book-comment">
+  <div class="book-comment-header">
+    <strong class="book-comment-name">Name</strong>
+    <span class="book-comment-time">vor 3 Min.</span>
+  </div>
+  <p class="book-comment-text">Kommentartext</p>
+</li>
+
+        <div>
+          <input class="book-comment-name-input" placeholder="Name...">
+          <textarea class="book-comment-text-input" placeholder="Kommentar..."></textarea>
+          <button class="book-comment-submit">Absenden</button>
+        </div>
+
       </div>
 
     </div>
@@ -102,6 +171,18 @@ function toggleLike(index) {
   else books[index].likes--;
 
   renderBooks();
+}
+
+// Zeit formatieren
+function formatTime(dateString) {
+  const date = new Date(dateString);
+  const diff = Math.floor((Date.now() - date.getTime()) / 1000);
+
+  if (diff < 60) return "gerade eben";
+  if (diff < 3600) return `vor ${Math.floor(diff / 60)} Min.`;
+  if (diff < 86400) return `vor ${Math.floor(diff / 3600)} Std.`;
+
+  return date.toLocaleDateString("de-DE");
 }
 
 // Render Books on Page Load
