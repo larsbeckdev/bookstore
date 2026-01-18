@@ -93,8 +93,8 @@ function bookCard(book, index) {
         </div>
         <div class="book-copyright-container">
         <p class="book-copyright">Copyright © ${new Date().getFullYear()} ${
-    book.author
-  }</p>
+          book.author
+        }</p>
         </div>
 
         
