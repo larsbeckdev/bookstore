@@ -13,7 +13,7 @@ function renderBooks() {
 function renderComments(book, container) {
   container.innerHTML = "";
 
-  book.comments.forEach(c => {
+  book.comments.forEach((c) => {
     const li = document.createElement("li");
     li.className = "book-comment";
 
@@ -91,8 +91,8 @@ function bookCard(book, index) {
         </div>
         <div class="book-copyright-container">
         <p class="book-copyright">Copyright © ${new Date().getFullYear()} ${
-    book.author
-  }</p>
+          book.author
+        }</p>
         </div>
 
         
@@ -105,7 +105,7 @@ function bookCard(book, index) {
           {
             minimumFractionDigits: 2,
             maximumFractionDigits: 2,
-          }
+          },
         ).format(book.price)}</p> <span class="currency">${book.currency}</span>
         </div>
 
