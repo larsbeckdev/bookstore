@@ -260,7 +260,7 @@
   max-width: max-content;
   max-height: max-content;
   height: auto;
-  color: red;
+  color: transparent;
   background: transparent;
   border: none;
 }
@@ -268,12 +268,12 @@
 .book-comment-delete svg {
   width: 16px;
   height: 16px;
-  stroke: currentColor;
-  fill: none;
+  stroke: red;
+  fill: red;
 }
 
 
-.book-comment-header button:hover, {
-  outline: 0px solid transparent!important;
-  outline-offset: 0px!important;
+.book-comment-delete:hover {
+  outline: 0px solid transparent;
+  outline-offset: 0px;
 }
