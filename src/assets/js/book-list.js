@@ -107,7 +107,7 @@ function bookCard(book, index) {
           {
             minimumFractionDigits: 2,
             maximumFractionDigits: 2,
-          }
+          },
         ).format(book.price)}</p> <span class="currency">${book.currency}</span>
         </div>
 
