@@ -10,6 +10,6 @@ export function renderBooks(books, listEl, persist) {
 
   const cards = listEl.querySelectorAll(".book-card");
   cards.forEach((cardEl, index) => {
-    setupCommentForm(books[index], cardEl);
+    setupCommentForm(books[index], cardEl, persist);
   });
 }
