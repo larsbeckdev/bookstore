@@ -13,8 +13,6 @@ textarea,
   border-radius: var(--radius-sm);
   background: var(--color-input);
   color: var(--color-foreground);
-  max-height: 100px;
-  resize: none;
 
 }
 

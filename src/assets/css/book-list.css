@@ -227,7 +227,8 @@
   padding: 0.5rem;
   border-radius: var(--radius-sm);
   font-size: 0.875rem;
-  resize: vertical;
+  max-height: 100px;
+  resize: none;
 }
 
 .book-comment-empty {
