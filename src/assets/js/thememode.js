@@ -1,6 +1,6 @@
 const html = document.documentElement;
 
-// Initial
+// Initial Theme setzen
 const stored = localStorage.getItem("theme");
 
 if (stored === "dark") {
@@ -11,6 +11,7 @@ if (stored === "dark") {
   html.classList.remove("dark");
 }
 
+// Theme wechseln
 function toggleTheme() {
   const isDark = html.classList.toggle("dark");
   html.classList.toggle("light", !isDark);

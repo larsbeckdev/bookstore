@@ -1,34 +1,40 @@
 import { renderBooks } from "./books-ui.js";
 import { toggleLike } from "./likes.js";
-
 import { loadBooks, saveBooks } from "./storage.js";
 import { books as fallbackBooks } from "./books.js";
 
-const books = loadBooks(fallbackBooks);
-const listEl = document.getElementById("book-card-list");
+let books;
+let listEl;
 
-// Speichern der Buchliste in localStorage
+// Bücher speichern
 function persist() {
   saveBooks(books);
 }
 
-// Event Delegation für Like-Buttons
-listEl?.addEventListener("click", (e) => {
-  const target = e.target instanceof Element ? e.target : null;
-  const btn = target?.closest("[data-like-index]");
-  if (!btn) return;
-
-  const index = Number(btn.dataset.likeIndex);
-  if (Number.isNaN(index)) return;
-
-  toggleLike(books, index);
-  render();
-});
-
-// Rerendern der Buchliste
+// Bücher rendern
 function render() {
   if (!listEl) return;
   renderBooks(books, listEl, persist);
 }
 
-render();
+// Bücher initialisieren
+window.initBooks = function () {
+  books = loadBooks(fallbackBooks);
+  listEl = document.getElementById("book-card-list");
+
+  // Likes delegieren
+  listEl?.addEventListener("click", (e) => {
+    const target = e.target instanceof Element ? e.target : null;
+    const btn = target?.closest("[data-like-index]");
+    if (!btn) return;
+
+    const index = Number(btn.dataset.likeIndex);
+    if (Number.isNaN(index)) return;
+
+    toggleLike(books, index);
+    persist();
+    render();
+  });
+
+  render();
+};

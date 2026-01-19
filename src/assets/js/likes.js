@@ -1,3 +1,4 @@
+// Bücher-Likes umschalten
 export function toggleLike(books, index) {
   const book = books[index];
   if (!book) return;

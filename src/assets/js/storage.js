@@ -1,5 +1,6 @@
-const STORAGE_KEY = "books_app_books_v1";
+const STORAGE_KEY = "books";
 
+// Bücher aus dem Local Storage laden
 export function loadBooks(fallbackBooks = []) {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
@@ -11,6 +12,7 @@ export function loadBooks(fallbackBooks = []) {
   }
 }
 
+// Bücher im Local Storage speichern
 export function saveBooks(books) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(books));
 }

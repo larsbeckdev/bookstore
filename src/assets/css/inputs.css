@@ -11,6 +11,8 @@ textarea,
   padding: 0.625rem 0.75rem;
   border: 1px solid transparent;
   border-radius: var(--radius-sm);
+  background: var(--color-input);
+  color: var(--color-foreground);
 
 }
 

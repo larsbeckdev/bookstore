@@ -1,5 +1,6 @@
 export const STORAGE_KEY = "bookapp_books";
 
+// HTML escapen
 export function escapeHtml(str) {
   return String(str)
     .replaceAll("&", "&amp;")
